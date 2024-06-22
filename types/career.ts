@@ -1,4 +1,4 @@
-interface Career {
+export interface Career {
   company: string;
   position: string;
   startDate: string;
@@ -7,7 +7,7 @@ interface Career {
   projects: Project[];
 }
 
-interface Project {
+export interface Project {
   title: string;
   description: string;
 }

@@ -1,0 +1,38 @@
+/* コンテナスタイル */
+.container {
+  @apply max-w-4xl mx-auto my-12;
+}
+
+/* 見出しスタイル */
+.heading {
+  @apply text-2xl font-bold mb-6;
+}
+
+/* フォームコンテナスタイル */
+.form-container {
+  @apply p-8 bg-white shadow-md rounded-lg;
+}
+
+/* インプットスタイル */
+.input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring;
+}
+
+/* ボタンスタイル */
+.button {
+  @apply border border-black text-black font-bold py-2 px-4 rounded focus:outline-none focus:ring;
+}
+
+/* サブミットボタンスタイル */
+.submit-button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring;
+}
+
+/* キャンセルボタンスタイル */
+.cancel-button {
+  @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring;
+}
+
+.remove-button {
+  @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring;
+}
