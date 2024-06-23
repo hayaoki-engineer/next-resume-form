@@ -3,3 +3,52 @@
 @tailwind utilities;
 
 
+/* グローバルスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
