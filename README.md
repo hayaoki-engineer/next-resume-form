@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 各ディレクトリとファイルの役割
 
-## Getting Started
+app/
+Next.jsのページディレクトリ。各ページコンポーネント（page.tsx）が配置されます。共通レイアウト（layout.tsx）もここに配置します。
 
-First, run the development server:
+components/
+再利用可能なReactコンポーネントが配置されます。CareerForm.tsx と CareerList.tsx は職務経歴のフォームとリスト表示を担当します。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+data/
+ダミーデータなどの静的なデータファイルが配置されます。dummyData.json に職務経歴のダミーデータが含まれています。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+firebase/
+Firebase関連の設定ファイルが配置されます。config.ts にはFirebaseの初期化設定が含まれます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# コンポーネントの役割
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## CareerForm.tsx
+職務経歴を入力するためのフォームコンポーネントです。
 
-## Learn More
+機能
+- フォームフィールドの状態管理
+- フォームの送信とFirestoreへのデータ保存
 
-To learn more about Next.js, take a look at the following resources:
+## CareerList.tsx
+職務経歴を一覧表示するためのコンポーネント
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+機能
+- ダミーデータとFirestoreから取得したデータの統合
+- 職務経歴の削除機能
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# 起きている問題、今後の実装方針
 
-## Deploy on Vercel
+- 職務経歴を入力したときに、データが2つ登録される
+- フォーム送信時に一覧にリダイレクトされる
+- UIをお洒落にする（MUI, Chakra UI？）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
